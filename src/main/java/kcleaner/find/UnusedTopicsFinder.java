@@ -1,4 +1,4 @@
-package kcleaner.finder;
+package kcleaner.find;
 
 import java.util.Set;
 

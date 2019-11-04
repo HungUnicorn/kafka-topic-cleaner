@@ -1,7 +1,7 @@
-package kcleaner.finder;
+package kcleaner.find;
 
 
-import kcleaner.topic.definder.ReservedTopic;
+import kcleaner.topic.define.ReservedTopic;
 
 import java.util.Collections;
 import java.util.HashSet;

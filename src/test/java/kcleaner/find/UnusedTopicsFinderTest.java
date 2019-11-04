@@ -1,6 +1,6 @@
-package kcleaner.finder;
+package kcleaner.find;
 
-import kcleaner.topic.definder.ReservedTopic;
+import kcleaner.topic.define.ReservedTopic;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;

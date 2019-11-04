@@ -7,12 +7,12 @@ import org.apache.kafka.clients.admin.KafkaAdminClient;
 import kcleaner.config.Configuration;
 import kcleaner.delete.TopicDeleter;
 import kcleaner.delete.TopicDeleterImpl;
-import kcleaner.finder.UnusedTopicsFinder;
-import kcleaner.finder.UnusedTopicsFinderImpl;
-import kcleaner.topic.definder.ConsumedTopic;
-import kcleaner.topic.definder.InternalTopic;
-import kcleaner.topic.definder.NonEmptyTopic;
-import kcleaner.topic.definder.ReservedTopic;
+import kcleaner.find.UnusedTopicsFinder;
+import kcleaner.find.UnusedTopicsFinderImpl;
+import kcleaner.topic.define.ConsumedTopic;
+import kcleaner.topic.define.InternalTopic;
+import kcleaner.topic.define.NonEmptyTopic;
+import kcleaner.topic.define.ReservedTopic;
 
 import java.util.HashSet;
 import java.util.Properties;

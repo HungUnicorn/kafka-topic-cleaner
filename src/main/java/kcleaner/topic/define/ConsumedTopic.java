@@ -1,4 +1,4 @@
-package kcleaner.topic.definder;
+package kcleaner.topic.define;
 
 
 import org.apache.kafka.clients.admin.AdminClient;
