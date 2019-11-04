@@ -7,13 +7,6 @@ Unused topics are topics that match the following three conditions:
 which by default is 7 days.
 - Topic that is empty
 
-## Why not python
-To know which topics are/were consumed, the library must implement ListConsumerGroup API. 
-Only one python library is up-to-date,
-developed by confluent, but this API does not implement ListConsumerGroup API yet.
-https://github.com/confluentinc/confluent-kafka-python/issues/223 
-
-
 ## Environment variables
 - `BOOTSTRAP_SERVERS`: broker hosts
 - `IS_DELETE_ENABLED`: without setting this, this application does not delete any topic and only log the topics should be deleted
@@ -27,3 +20,9 @@ https://github.com/confluentinc/confluent-kafka-python/issues/223
 
 ## How to test locally
 Use `docker-compose` and it creates some sample topics that demonstrates deletions  
+
+## Why not python
+To know which topics are/were consumed, the library must implement ListConsumerGroup API.
+Only one python library is up-to-date,
+developed by confluent, but this API does not implement ListConsumerGroup API yet.
+https://github.com/confluentinc/confluent-kafka-python/issues/223
