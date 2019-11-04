@@ -1,0 +1,34 @@
+image: docker.jamba.net/build/bionic-maven:3-openjdk-11
+
+include:
+  - project: gitops/gitlab-ci-templates
+    file: /build/springboot2-1.1.0.yml
+    ref: master
+  - project: gitops/gitlab-ci-templates
+    file: /package/docker-1.2.0/docker-package.yml
+    ref: master
+  - project: gitops/gitlab-ci-templates
+    file: /deploy/gitops-2.1.0/update-app-chart.yml
+    ref: master
+
+variables:
+  JAVA_BUILD_IMAGE: docker.jamba.net/build/bionic-maven:3-openjdk-11
+  IMAGE_NAME: bi/kafka-topics-cleaner
+
+  HELMCHART_PROJECT_URL: "git@git.jamba.net:/helm-charts/bi/kafka-topics-cleaner.git"
+  HELMCHART_PROJECT_ID: "663"
+  HELMCHART_IMAGE_TAG_YAML_KEY: image.tag
+
+stages:
+  - test
+  - build
+  - docker-package
+  - gitops-update-app-chart
+
+maven-unit-test:
+  extends: .maven-unit-test-spec
+
+pages:
+  extends: .code-coverage-report-pages
+  dependencies:
+    - maven-unit-test
