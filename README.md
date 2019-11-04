@@ -12,6 +12,11 @@ which by default is 7 days.
 - `IS_DELETE_ENABLED`: without setting this, this application does not delete any topic and only log the topics should be deleted
 
 ## How to use
+
+#### Pull from dockerhub
+`docker run --rm --name kafka-topic-cleaner --network=host -e BOOTSTRAP_SERVERS=localhost:29092 sendohchange/kafka-topic-cleaner`
+
+### Build locally
 - `mvn clean package`
  - `docker build -t kafka-topic-cleaner .` 
  - `docker run --rm --name --network=host kafka-topic-cleaner -e BOOTSTRAP_SERVERS=localhost:29092 kafka-topic-cleaner` 
